@@ -1,7 +1,7 @@
 # Selenium TestNG Cucumber Automation Framework
 
 ## Overview
-This project is a sample UI automation framework built for portfolio purposes using Selenium WebDriver, TestNG and Cucumber. It demonstrates a clean automation structure with reusable components and practical end-to-end scenarios.
+This project is a UI automation framework built using Selenium WebDriver, TestNG and Cucumber. It demonstrates a clean automation structure with reusable components and practical end-to-end scenarios.
 
 ## Tech Stack
 - Java
