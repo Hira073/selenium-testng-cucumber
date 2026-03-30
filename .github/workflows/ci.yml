@@ -11,6 +11,10 @@ jobs:
   test:
     runs-on: ubuntu-latest
 
+    defaults:
+      run:
+        working-directory: selenium-testng-cucumber-portfolio
+
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
