@@ -2,8 +2,7 @@
 
 This is a small portfolio-ready UI automation framework built with **Java, Selenium WebDriver, TestNG and Cucumber**.
 
-It automates a realistic login and cart flow on **SauceDemo** and shows recruiters that you understand:
-- Page Object Model
+It automates a realistic login and cart flow on **SauceDemo** 
 - BDD with Gherkin
 - TestNG execution
 - reusable driver setup
@@ -40,15 +39,3 @@ src
 │       └── features
 ```
 
-## How to run
-```bash
-mvn clean test
-```
-
-## Good GitHub repo title ideas
-- `selenium-testng-cucumber-portfolio`
-- `java-ui-automation-framework`
-- `bdd-ui-automation-demo`
-
-## What to mention to HR
-This project demonstrates framework design basics, BDD authoring, Page Object Model, reusable test setup and practical web automation using Selenium.
