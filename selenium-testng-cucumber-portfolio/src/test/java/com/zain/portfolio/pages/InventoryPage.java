@@ -16,11 +16,11 @@ public class InventoryPage extends BasePage {
     }
 
     public void addProductToCart(String productName) {
-        click(By.xpath("//div[text()='" + productName + "']/ancestor::div[@class='inventory_item']//button"));
+        click(getProductButton(productName, "add-to-cart"));
     }
 
     public void removeProductFromCart(String productName) {
-        click(By.xpath("//div[text()='" + productName + "']/ancestor::div[@class='inventory_item']//button[contains(text(),'Remove')]"));
+        click(getProductButton(productName, "remove"));
     }
 
     public String getCartBadgeText() {
@@ -29,5 +29,11 @@ public class InventoryPage extends BasePage {
 
     public boolean isCartBadgeVisible() {
         return isDisplayed(cartBadge);
+    }
+
+    private By getProductButton(String productName, String buttonAction) {
+        String xpath = "//div[contains(@class,'inventory_item')][.//div[contains(@class,'inventory_item_name') and normalize-space()='" 
+                + productName + "']]//button[contains(@id,'" + buttonAction + "')]";
+        return By.xpath(xpath);
     }
 }
