@@ -1,6 +1,7 @@
 package com.zain.portfolio.pages;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -36,6 +37,10 @@ public abstract class BasePage {
     }
 
     protected boolean isDisplayed(By locator) {
-        return !driver.findElements(locator).isEmpty() && driver.findElement(locator).isDisplayed();
+        try {
+            return wait.until(ExpectedConditions.visibilityOfElementLocated(locator)).isDisplayed();
+        } catch (TimeoutException e) {
+            return false;
+        }
     }
 }
